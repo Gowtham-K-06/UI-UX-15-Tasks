@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 3 - YouTube Home Page</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<style>
+  body{ font-family:Roboto, Arial, sans-serif; background:#fff; }
+  .navbar{ border-bottom:1px solid #e5e5e5; }
+  .yt-logo{ font-weight:700; font-size:1.4rem; color:#0f0f0f; }
+  .yt-logo span{ color:#ff0000; }
+  .search-box{ border-radius:20px 0 0 20px; }
+  .search-btn{ border-radius:0 20px 20px 0; background:#f8f8f8; }
+  .sidebar{ width:240px; }
+  .sidebar .nav-link{ color:#0f0f0f; font-size:.9rem; padding:.5rem .75rem; border-radius:10px; }
+  .sidebar .nav-link:hover{ background:#f2f2f2; }
+  .sidebar .nav-link.active{ background:#f2f2f2; font-weight:600; }
+  .chip{ border-radius:8px; font-size:.85rem; padding:.35rem .9rem; white-space:nowrap; }
+  .video-thumb{ background:#ccc; border-radius:12px; aspect-ratio:16/9; }
+  .channel-avatar{ width:36px; height:36px; }
+  .video-title{ font-size:.9rem; font-weight:600; line-height:1.2; }
+  .video-meta{ font-size:.8rem; color:#606060; }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand px-3 py-2">
+  <div class="d-flex align-items-center gap-2">
+    <i class="bi bi-list fs-4"></i>
+    <span class="yt-logo"><i class="bi bi-youtube text-danger"></i> You<span>Tube</span></span>
+  </div>
+  <div class="mx-auto d-none d-md-flex" style="width:40%;">
+    <input type="text" class="form-control search-box" placeholder="Search">
+    <button class="btn btn-light border search-btn"><i class="bi bi-search"></i></button>
+  </div>
+  <div class="d-flex align-items-center gap-3">
+    <i class="bi bi-camera-video fs-5"></i>
+    <i class="bi bi-bell fs-5"></i>
+    <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" style="width:32px;height:32px;">G</span>
+  </div>
+</nav>
+
+<div class="d-flex">
+  <div class="sidebar d-none d-lg-block p-2">
+    <a class="nav-link active d-flex align-items-center gap-3" href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+    <a class="nav-link d-flex align-items-center gap-3" href="#"><i class="bi bi-play-btn"></i> Shorts</a>
+    <a class="nav-link d-flex align-items-center gap-3" href="#"><i class="bi bi-collection-play"></i> Subscriptions</a>
+    <hr>
+    <a class="nav-link d-flex align-items-center gap-3" href="#"><i class="bi bi-person-video2"></i> You</a>
+    <a class="nav-link d-flex align-items-center gap-3" href="#"><i class="bi bi-clock-history"></i> History</a>
+    <hr>
+    <p class="px-2 small text-muted mb-1">Subscriptions</p>
+    <a class="nav-link d-flex align-items-center gap-3" href="#">📺 Tech Channel</a>
+    <a class="nav-link d-flex align-items-center gap-3" href="#">🎵 Music World</a>
+  </div>
+
+  <div class="flex-grow-1 p-3">
+    <div class="d-flex gap-2 mb-3 overflow-auto">
+      <button class="btn btn-dark chip">All</button>
+      <button class="btn btn-light border chip">Music</button>
+      <button class="btn btn-light border chip">Gaming</button>
+      <button class="btn btn-light border chip">News</button>
+      <button class="btn btn-light border chip">Live</button>
+      <button class="btn btn-light border chip">AI & Data Science</button>
+      <button class="btn btn-light border chip">Cricket</button>
+      <button class="btn btn-light border chip">Comedy</button>
+    </div>
+
+    <div class="row g-4">
+      <!-- repeat video cards -->
+      <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="video-thumb mb-2"></div>
+        <div class="d-flex gap-2">
+          <div class="rounded-circle bg-secondary channel-avatar flex-shrink-0"></div>
+          <div>
+            <div class="video-title">Building a Machine Learning Model From Scratch</div>
+            <div class="video-meta">Tech Channel • 120K views • 2 days ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="video-thumb mb-2"></div>
+        <div class="d-flex gap-2">
+          <div class="rounded-circle bg-secondary channel-avatar flex-shrink-0"></div>
+          <div>
+            <div class="video-title">GATE DA 2027 Full Syllabus Breakdown</div>
+            <div class="video-meta">Exam Prep Hub • 58K views • 1 week ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="video-thumb mb-2"></div>
+        <div class="d-flex gap-2">
+          <div class="rounded-circle bg-secondary channel-avatar flex-shrink-0"></div>
+          <div>
+            <div class="video-title">Bootstrap 5 Crash Course for Beginners</div>
+            <div class="video-meta">Code With Me • 340K views • 3 months ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="video-thumb mb-2"></div>
+        <div class="d-flex gap-2">
+          <div class="rounded-circle bg-secondary channel-avatar flex-shrink-0"></div>
+          <div>
+            <div class="video-title">Tamil Poetry Reading Session - Live</div>
+            <div class="video-meta">Isai Kavithai • 12K views • 5 hours ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="video-thumb mb-2"></div>
+        <div class="d-flex gap-2">
+          <div class="rounded-circle bg-secondary channel-avatar flex-shrink-0"></div>
+          <div>
+            <div class="video-title">IPL 2026 Season Highlights Analysis</div>
+            <div class="video-meta">Sports Data • 210K views • 2 weeks ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="video-thumb mb-2"></div>
+        <div class="d-flex gap-2">
+          <div class="rounded-circle bg-secondary channel-avatar flex-shrink-0"></div>
+          <div>
+            <div class="video-title">Resume Tips for Final Year Students</div>
+            <div class="video-meta">Career Guide • 89K views • 4 days ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="video-thumb mb-2"></div>
+        <div class="d-flex gap-2">
+          <div class="rounded-circle bg-secondary channel-avatar flex-shrink-0"></div>
+          <div>
+            <div class="video-title">Random Forest vs Logistic Regression Explained</div>
+            <div class="video-meta">ML Simplified • 76K views • 6 days ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="video-thumb mb-2"></div>
+        <div class="d-flex gap-2">
+          <div class="rounded-circle bg-secondary channel-avatar flex-shrink-0"></div>
+          <div>
+            <div class="video-title">Streamlit Deployment Tutorial 2026</div>
+            <div class="video-meta">DevOps Daily • 45K views • 1 day ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
