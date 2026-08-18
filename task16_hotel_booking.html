@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 16 - Hotel Booking Website</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<style>
+  body{ font-family:'Segoe UI',Arial,sans-serif; }
+  .hero{ background:linear-gradient(rgba(20,20,35,.55),rgba(20,20,35,.55)), linear-gradient(120deg,#2c3e6b,#1a1a2e); min-height:60vh; color:#fff; display:flex; align-items:center; }
+  .search-card{ background:#fff; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,.15); margin-top:-55px; position:relative; z-index:2; }
+  .room-card{ border-radius:14px; overflow:hidden; border:1px solid #eee; }
+  .room-img{ background:#dfe3ee; aspect-ratio:4/3; }
+  .badge-rating{ background:#1e8e5a; }
+  .review-card{ border-radius:12px; border:1px solid #eee; background:#f9faff; }
+  .btn-navy{ background:#2c3e6b; border-color:#2c3e6b; color:#fff; }
+  .gallery-img{ background:#dfe3ee; border-radius:10px; aspect-ratio:1/1; }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 px-4 py-3" style="z-index:5;">
+  <span class="fw-bold fs-4"><i class="bi bi-building me-2"></i>StayInn</span>
+  <div class="ms-auto d-flex gap-3">
+    <a href="#" class="text-white text-decoration-none">Rooms</a>
+    <a href="#" class="text-white text-decoration-none">Gallery</a>
+    <a href="#" class="text-white text-decoration-none">Reviews</a>
+    <a href="#" class="text-white text-decoration-none">Contact</a>
+  </div>
+</nav>
+
+<div class="hero text-center px-3">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Find Your Perfect Stay</h1>
+    <p class="fs-5">Handpicked hotels & resorts for every budget</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="search-card p-4">
+    <div class="row g-2 align-items-end">
+      <div class="col-md-3">
+        <label class="small fw-semibold">Destination</label>
+        <input class="form-control" placeholder="Salem, Tamil Nadu">
+      </div>
+      <div class="col-md-2">
+        <label class="small fw-semibold">Check-in</label>
+        <input type="date" class="form-control">
+      </div>
+      <div class="col-md-2">
+        <label class="small fw-semibold">Check-out</label>
+        <input type="date" class="form-control">
+      </div>
+      <div class="col-md-2">
+        <label class="small fw-semibold">Guests</label>
+        <select class="form-select"><option>2 Adults</option><option>1 Adult</option><option>Family</option></select>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-navy w-100">Search Rooms</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <h4 class="fw-bold mb-4">Available Rooms</h4>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="room-card">
+        <div class="room-img"></div>
+        <div class="p-3">
+          <div class="d-flex justify-content-between">
+            <h6 class="fw-bold mb-1">Deluxe King Room</h6>
+            <span class="badge badge-rating">4.6 ★</span>
+          </div>
+          <p class="small text-muted mb-2">Free WiFi • Breakfast Included • AC</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-bold">₹3,499 <span class="small text-muted fw-normal">/night</span></span>
+            <button class="btn btn-sm btn-outline-primary">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="room-card">
+        <div class="room-img"></div>
+        <div class="p-3">
+          <div class="d-flex justify-content-between">
+            <h6 class="fw-bold mb-1">Executive Suite</h6>
+            <span class="badge badge-rating">4.8 ★</span>
+          </div>
+          <p class="small text-muted mb-2">City View • Mini Bar • Free Parking</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-bold">₹5,999 <span class="small text-muted fw-normal">/night</span></span>
+            <button class="btn btn-sm btn-outline-primary">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="room-card">
+        <div class="room-img"></div>
+        <div class="p-3">
+          <div class="d-flex justify-content-between">
+            <h6 class="fw-bold mb-1">Standard Twin Room</h6>
+            <span class="badge badge-rating">4.2 ★</span>
+          </div>
+          <p class="small text-muted mb-2">Free WiFi • Work Desk • AC</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-bold">₹2,199 <span class="small text-muted fw-normal">/night</span></span>
+            <button class="btn btn-sm btn-outline-primary">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <h4 class="fw-bold mb-4">Gallery</h4>
+  <div class="row g-3">
+    <div class="col-6 col-md-3"><div class="gallery-img"></div></div>
+    <div class="col-6 col-md-3"><div class="gallery-img"></div></div>
+    <div class="col-6 col-md-3"><div class="gallery-img"></div></div>
+    <div class="col-6 col-md-3"><div class="gallery-img"></div></div>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <h4 class="fw-bold mb-4">Guest Reviews</h4>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="review-card p-3">
+        <div class="d-flex justify-content-between">
+          <p class="fw-semibold mb-1">Priya S.</p>
+          <span class="text-warning">★★★★★</span>
+        </div>
+        <p class="small text-muted mb-0">Excellent hospitality, clean rooms, and great location. Highly recommend for family stays.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="review-card p-3">
+        <div class="d-flex justify-content-between">
+          <p class="fw-semibold mb-1">Arun K.</p>
+          <span class="text-warning">★★★★☆</span>
+        </div>
+        <p class="small text-muted mb-0">Comfortable beds and friendly staff. Breakfast options could be improved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="py-4 bg-dark text-white-50 text-center small">© 2026 StayInn Hotels. All rights reserved.</footer>
+</body>
+</html>
